@@ -76,35 +76,11 @@ export function FilterPanel({ onClose }: FilterPanelProps) {
 
         {/* Location */}
         <FilterSection title="Location">
-          <div className="space-y-3">
+          <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-tesla-dark-card border border-tesla-dark-border">
+            <span className="text-lg">🇨🇦</span>
             <div>
-              <label className="text-xs text-tesla-dark-muted mb-1.5 block">ZIP Code</label>
-              <input
-                type="text"
-                placeholder="e.g. 10001"
-                value={filters.zip}
-                onChange={(e) => setFilter("zip", e.target.value)}
-                maxLength={5}
-                className="w-full px-3 py-2 rounded-lg bg-tesla-dark-card border border-tesla-dark-border text-white placeholder:text-tesla-dark-muted text-sm focus:outline-none focus:border-white/30 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="text-xs text-tesla-dark-muted mb-1.5 block">
-                Radius: <span className="text-white">{filters.radiusMiles} mi</span>
-              </label>
-              <input
-                type="range"
-                min={25}
-                max={500}
-                step={25}
-                value={filters.radiusMiles}
-                onChange={(e) => setFilter("radiusMiles", Number(e.target.value))}
-                className="w-full accent-tesla-red"
-              />
-              <div className="flex justify-between text-xs text-tesla-dark-muted mt-1">
-                <span>25 mi</span>
-                <span>500 mi</span>
-              </div>
+              <div className="text-sm text-white font-medium">Ontario, Canada</div>
+              <div className="text-xs text-tesla-dark-muted">Province-wide search</div>
             </div>
           </div>
         </FilterSection>
@@ -172,7 +148,7 @@ export function FilterPanel({ onClose }: FilterPanelProps) {
           <div>
             <label className="text-xs text-tesla-dark-muted mb-1.5 block">
               Up to: <span className="text-white">
-                {filters.mileageMax >= 150000 ? "Any" : `${(filters.mileageMax / 1000).toFixed(0)}k mi`}
+                {filters.mileageMax >= 150000 ? "Any" : `${(filters.mileageMax / 1000).toFixed(0)}k km`}
               </span>
             </label>
             <input

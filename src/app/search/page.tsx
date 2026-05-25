@@ -68,12 +68,12 @@ export default function SearchPage() {
             <h1 className="text-3xl sm:text-5xl font-bold text-white leading-tight tracking-tight mb-3">
               Find the best
               <br />
-              <span className="text-tesla-red">Model Y deal</span> near you
+              <span className="text-tesla-red">Model Y deal</span> in Ontario
             </h1>
             <p className="text-tesla-silver text-base sm:text-lg max-w-xl">
-              We aggregate listings from CarGurus, AutoTrader, Cars.com, and
+              We aggregate listings from CarGurus, AutoTrader, Kijiji Autos, and
               more — then tell you exactly whether each price is a great deal,
-              fair, or overpriced.
+              fair, or overpriced. All prices in CAD 🇨🇦
             </p>
           </div>
 

@@ -166,8 +166,8 @@ export const INTERIOR_COLORS = [
 export const DEFAULT_FILTERS: SearchFilters = {
   yearMin: 2019,
   yearMax: new Date().getFullYear() + 1,
-  priceMin: 15000,
-  priceMax: 80000,
+  priceMin: 20000,
+  priceMax: 100000,
   mileageMax: 150000,
   variants: [],
   exteriorColors: [],
@@ -176,8 +176,8 @@ export const DEFAULT_FILTERS: SearchFilters = {
   condition: ["used", "new", "cpo"],
   cleanTitleOnly: false,
   accidentFreeOnly: false,
-  zip: "",
-  radiusMiles: 100,
+  zip: "M5V 3A8", // Toronto, ON
+  radiusMiles: 500, // province-wide
 };
 
 export const DEFAULT_SORT: SortOption = "best_deal";

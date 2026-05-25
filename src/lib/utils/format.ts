@@ -6,16 +6,16 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatPrice(price: number): string {
-  return new Intl.NumberFormat("en-US", {
+  return new Intl.NumberFormat("en-CA", {
     style: "currency",
-    currency: "USD",
+    currency: "CAD",
     maximumFractionDigits: 0,
   }).format(price);
 }
 
 export function formatMileage(miles: number | null): string {
   if (miles === null) return "—";
-  return new Intl.NumberFormat("en-US").format(miles) + " mi";
+  return new Intl.NumberFormat("en-CA").format(miles) + " km";
 }
 
 export function formatDelta(delta: number | null, percent: number | null): string {
@@ -23,7 +23,7 @@ export function formatDelta(delta: number | null, percent: number | null): strin
   const sign = delta < 0 ? "−" : "+";
   const abs = Math.abs(delta);
   const pct = Math.abs(percent).toFixed(1);
-  return `${sign}$${new Intl.NumberFormat("en-US").format(abs)} (${pct}%)`;
+  return `${sign}$${new Intl.NumberFormat("en-CA").format(abs)} (${pct}%)`;
 }
 
 export function timeAgo(dateStr: string): string {

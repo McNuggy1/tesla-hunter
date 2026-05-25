@@ -108,6 +108,9 @@ function applyClientSideFilters(
   filters: Partial<SearchFilters>
 ): TeslaListing[] {
   return listings.filter((l) => {
+    // Always restrict to Ontario, Canada
+    if (l.state !== "ON") return false;
+
     if (filters.priceMin && l.price < filters.priceMin) return false;
     if (filters.priceMax && l.price > filters.priceMax) return false;
     if (filters.yearMin && l.year < filters.yearMin) return false;
