@@ -62,9 +62,9 @@ export class CarGurusScraper implements BaseScraper {
     const start = Date.now();
 
     try {
-      // NOTE FOR MVP: We return mock data in dev to avoid hitting real endpoints
-      // Replace with real scraping logic in production
-      if (process.env.NODE_ENV === "development" && !process.env.ENABLE_REAL_SCRAPING) {
+      // NOTE FOR MVP: We return mock data unless ENABLE_REAL_SCRAPING=true is set.
+      // This works in both dev and production until real scraping is configured.
+      if (!process.env.ENABLE_REAL_SCRAPING) {
         return generateMockCarGurusData(filters, page, start);
       }
 
